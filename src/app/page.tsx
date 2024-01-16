@@ -6,6 +6,7 @@ import { GetData } from "../lib/fetch";
 
 export default async function Home() {
   let data = await GetData("https://express-8teazmyg8-buddyshubhs-projects.vercel.app/data")
+
   let renderCards = () => {
     let cardsData = data.map((item: any) => {
       return item
@@ -16,11 +17,10 @@ export default async function Home() {
     return cards
 
   }
-  // renderCards()
 
   return (
     <main className=" gap-2 h-full px-3">
-      {renderCards()}
+      {/* {renderCards()} */}
     </main>
   )
 }
