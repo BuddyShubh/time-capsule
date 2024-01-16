@@ -6,8 +6,8 @@
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { fetchData } from "../../lib/sendData";
-import { toast } from "sonner"
+import { SendData } from "../../lib/fetch";
+import { toast, ExternalToast } from "sonner"
 
 
 import { useState } from "react";
@@ -34,7 +34,7 @@ export default function Bury() {
       time: time,
       dateBuried: dateBuried
     }
-    fetchData('http://localhost:4000/data', data)
+    SendData('https://express-8teazmyg8-buddyshubhs-projects.vercel.app/data', data)
       .then(data => {
         // handle successful response
         console.log('Data:', data);
@@ -42,8 +42,7 @@ export default function Bury() {
         setTitle("")
         setDate("2024-01-01")
         setTime("12:00")
-        toast()
-
+        toast("wussup!!!")
       })
       .catch(error => {
         // handle error
@@ -108,4 +107,3 @@ export default function Bury() {
     </div>
   )
 }
-
