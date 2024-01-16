@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <main className=" gap-2 h-full px-3">
-      {/* {renderCards()} */}
+      {renderCards()}
     </main>
   )
 }
