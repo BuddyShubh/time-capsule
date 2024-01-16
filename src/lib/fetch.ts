@@ -14,7 +14,7 @@ function SendData(url: string, data: object) {
 }
 
 async function GetData(url: string) {
-    return await fetch(url, { cache: 'no-store' })
+    return await fetch(url)
         .then(response => response.json())
         .catch(error => {
             console.error('Error:', error);
